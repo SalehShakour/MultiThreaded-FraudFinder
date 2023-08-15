@@ -22,6 +22,7 @@ public class ThreadManager {
         }
         executor.shutdown();
 
+
         for (Account account:accountList.values()){
             System.out.println("ID: " + account.getAccountID());
             System.out.println("balance before changes: " + account.getBalance());
