@@ -20,6 +20,8 @@ public class ThreadManager {
         for (Runnable task : tasks) {
             executor.execute(task);
         }
+        executor.shutdown();
+
         for (Account account:accountList.values()){
             System.out.println("ID: " + account.getAccountID());
             System.out.println("balance before changes: " + account.getBalance());
@@ -28,7 +30,7 @@ public class ThreadManager {
             long newBalance = account.getBalance() + account.getPayable() - account.getReceivable();
             System.out.println("new balance : " + newBalance + "\n" + " -------------- ");
         }
-        executor.shutdown();
+
     }
 
 
