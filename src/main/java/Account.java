@@ -1,11 +1,11 @@
 public class Account {
     private final int accountID;
-    private final int ownerName;
+    private final String ownerName;
     private long balance;
     private long receivable = 0;
     private long payable = 0;
 
-    public Account(int accountID, int ownerName, long balance) {
+    public Account(int accountID, String ownerName, long balance) {
         this.accountID = accountID;
         this.ownerName = ownerName;
         this.balance = balance;
@@ -15,7 +15,7 @@ public class Account {
         return accountID;
     }
 
-    public int getOwnerName() {
+    public String getOwnerName() {
         return ownerName;
     }
 

@@ -1,2 +1,2 @@
-public record Transaction(int sourceID, int destinationID, long amount) {
+public record Transaction(Account sourceID, Account destinationID, long amount) {
 }
